@@ -1,11 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: false,
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        amazon_blue: {
+          light: "#232f3e",
+          DEFAULT: "#131921",
+        },
+      },
+    },
   },
-  plugins: [],
-}
+  plugins: [require("@tailwindcss/line-clamp")],
+};
